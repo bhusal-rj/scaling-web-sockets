@@ -1,0 +1,32 @@
+services:
+  sock-1:
+    build:
+      context: .
+    container_name: socket-1
+    hostname: socket-1
+  sock-2:
+    build:
+      context: .
+    container_name: socket-2
+    hostname: socket-2
+  sock-3:
+    build:
+      context: .
+    container_name: socket-3
+    hostname: socket-3
+  sock-4:
+    build:
+      context: .
+    container_name: socket-4
+    hostname: socket-4
+  redis:
+    image: redis
+
+  nginx:
+    image: nginx
+    container_name: "nginx-node"
+    hostname: nginx
+    ports:
+      - 8020:8080
+    volumes:
+      - /home/rajesh/scaling-web-sockets/nginx/nginx.conf:/etc/nginx/nginx.conf 
