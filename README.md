@@ -2,7 +2,7 @@
 
 When scaling WebSocket applications with a reverse proxy (such as Nginx) and Redis, the primary challenge lies in managing WebSocket connections across multiple servers. Redis can help overcome these challenges through its Pub/Sub (publish/subscribe) architecture, allowing different WebSocket server instances to communicate and synchronize client connections
 
-##Key Challenges
+## Key Challenges
 
 1. Handling the Upgrade Header in Reverse Proxy
 - The WebSocket protocol requires the Upgrade HTTP header to switch from HTTP to WebSocket. For WebSockets to work correctly behind a reverse proxy like Nginx, it must forward the Upgrade and Connection headers properly.
